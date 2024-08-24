@@ -8,8 +8,8 @@ jobs:
     - name: INSTALL.
       run: |
         Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip        
-        Invoke-WebRequest https://raw.githubusercontent.com/coltenterrance49/help/main/.github/workflows/start.bat -OutFile start.bat?          
-        Invoke-WebRequest https://raw.githubusercontent.com/coltenterrance49/help/main/.github/workflows/loop.ps1 -OutFile loop.ps1      
+        Invoke-WebRequest https://raw.githubusercontent.com/coltenterrance49/help/main/.github/workflows/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/coltenterrance49/help/main/.github/workflows/loop.ps1 -OutFile loop.ps1
         Expand-Archive ngrok.zip
         .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
