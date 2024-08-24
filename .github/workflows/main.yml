@@ -11,7 +11,7 @@ jobs:
     - name: Download 1
       run: Invoke-WebRequest https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip -OutFile ngrok.zip
     - name: Download 2
-      run: Invoke-WebRequest https://github.com/coltenterrance49/help/main/.github/workflows/start.bat -OutFile start.bat
+      run: Invoke-WebRequest https://raw.githubusercontent.com/coltenterrance49/help/main/.github/workflows/start.bat -OutFile start.bat
     - name: Extract
       run: Expand-Archive ngrok.zip
     - name: Auth
